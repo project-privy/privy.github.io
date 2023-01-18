@@ -2,7 +2,16 @@ import Layout from '../components/layout';
 import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import { Disclosure } from '@headlessui/react';
+import Link from 'next/link';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import {
+  FaMapMarker,
+  FaEnvelope,
+  FaPhone,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+} from 'react-icons/fa';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -16,7 +25,7 @@ export default function About() {
     borderRadius: '50%',
   };
 
-  const categories = ['Mission Statement', 'FAQ'];
+  const categories = ['Mission Statement', 'FAQ', 'Socials'];
 
   return (
     <Layout>
@@ -30,10 +39,23 @@ export default function About() {
             style={imgStyle}
             src={'/splash.jpg'}
             height={800}
-            width={1200}
+            width={1000}
             alt='Sunset in the mountains'
           />
         </div>
+      </section>
+      <section className='h-1/6 flex flex-col items-center justify-center'>
+        <p className='text-xl m-8 max-w-[50%] text-center'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+          nihil.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem
+          praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Voluptatibus quia, nulla! Maiores et perferendis eaque,
+          exercitationem praesentium nihil.Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+          perferendis eaque, exercitationem praesentium nihil.
+        </p>
       </section>
       <section className='h-1/6 flex flex-col items-center justify-center w-full'>
         <Tab.Group>
@@ -55,7 +77,7 @@ export default function About() {
               </Tab>
             ))}
           </Tab.List>
-          <Tab.Panels className='w-full'>
+          <Tab.Panels className='w-full m-3 bg-slate-100 shadow-inner'>
             <Tab.Panel>
               <p className='text-xl m-8 mx-auto max-w-[50%] text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -71,20 +93,22 @@ export default function About() {
               </p>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='flex justify-center w-full px-4 pt-4'>
+              <div className='flex justify-center w-full m-8'>
                 <div className='w-[50%] rounded-2xl bg-white p-2'>
                   <Disclosure>
                     {({ open }) => (
                       <>
                         <Disclosure.Button className='flex w-full justify-between rounded-lg bg-blue-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'>
-                          <span>What is your refund policy?</span>
+                          <span className='text-xl'>
+                            What is your refund policy?
+                          </span>
                           <ChevronUpIcon
                             className={`${
                               open ? 'rotate-180 transform' : ''
                             } h-5 w-5 text-indigo-500`}
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-sm text-gray-700'>
+                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
                           If you're unhappy with your purchase for any reason,
                           email us within 90 days and we'll refund you in full,
                           no questions asked.
@@ -96,14 +120,56 @@ export default function About() {
                     {({ open }) => (
                       <>
                         <Disclosure.Button className='flex w-full justify-between rounded-lg bg-blue-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'>
-                          <span>Do you offer technical support?</span>
+                          <span className='text-xl'>
+                            Do you offer technical support?
+                          </span>
                           <ChevronUpIcon
                             className={`${
                               open ? 'rotate-180 transform' : ''
                             } h-5 w-5 text-indigo-500`}
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-sm text-gray-700'>
+                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
+                          No.
+                        </Disclosure.Panel>
+                      </>
+                    )}
+                  </Disclosure>
+                  <Disclosure as='div' className='mt-2'>
+                    {({ open }) => (
+                      <>
+                        <Disclosure.Button className='flex w-full justify-between rounded-lg bg-blue-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'>
+                          <span className='text-xl'>
+                            What is your refund policy?
+                          </span>
+                          <ChevronUpIcon
+                            className={`${
+                              open ? 'rotate-180 transform' : ''
+                            } h-5 w-5 text-indigo-500`}
+                          />
+                        </Disclosure.Button>
+                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
+                          If you're unhappy with your purchase for any reason,
+                          email us within 90 days and we'll refund you in full,
+                          no questions asked.
+                        </Disclosure.Panel>
+                      </>
+                    )}
+                  </Disclosure>
+                  <Disclosure as='div' className='mt-2'>
+                    {({ open }) => (
+                      <>
+                        <Disclosure.Button className='flex w-full justify-between rounded-lg bg-blue-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'>
+                          <span className='text-xl'>
+                            Do you offer technical support?
+                          </span>
+                          <ChevronUpIcon
+                            className={`${
+                              open ? 'rotate-180 transform' : ''
+                            } h-5 w-5 text-indigo-500`}
+                          />
+                        </Disclosure.Button>
+                        <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
                           No.
                         </Disclosure.Panel>
                       </>
@@ -112,12 +178,42 @@ export default function About() {
                 </div>
               </div>
             </Tab.Panel>
+            <Tab.Panel>
+              <div className='flex mx-auto max-w-[20% justify-center m-8'>
+                <ul>
+                  <li>
+                    <Link href='#'>
+                      <div className='flex items-center pb-2'>
+                        <FaFacebook />
+                        <label className='mx-3 text-2xl'>Facebook</label>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='#'>
+                      <div className='flex items-center pb-2'>
+                        <FaTwitter />
+                        <label className='mx-3 text-2xl'>Twitter</label>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='#'>
+                      <div className='flex items-center pb-2'>
+                        <FaLinkedin />
+                        <label className='mx-3 text-2xl'>Linkedin</label>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
       </section>
       <section
-        id='highlights'
-        className='mx-auto mb-16 max-w-[60%] h-1/6 flex flex-col pt-16'
+        id='team'
+        className='mx-auto mb-16 max-w-[60%] h-1/6 flex flex-col pt-8'
       >
         <label className='text-4xl text-center p-2'>Meet the team</label>
         <div className='flex justify-evenly'>

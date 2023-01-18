@@ -31,9 +31,9 @@ const Header = () => {
       </Link>
       <nav>
         <ul className='list-none flex align-baseline items-center text-xl'>
-          <li className='ml-8 justify-center'>
+          {/* <li className='ml-8 justify-center'>
             <Link href='/contact'>Contact</Link>
-          </li>
+          </li> */}
           <li className='ml-8 justify-center'>
             <Link href='/about'>About Us</Link>
           </li>
