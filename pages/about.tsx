@@ -109,9 +109,9 @@ export default function About() {
                           />
                         </Disclosure.Button>
                         <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
-                          If you're unhappy with your purchase for any reason,
-                          email us within 90 days and we'll refund you in full,
-                          no questions asked.
+                          If you&apos;re unhappy with your purchase for any
+                          reason, email us within 90 days and we&apos;ll refund
+                          you in full, no questions asked.
                         </Disclosure.Panel>
                       </>
                     )}
@@ -149,9 +149,9 @@ export default function About() {
                           />
                         </Disclosure.Button>
                         <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
-                          If you're unhappy with your purchase for any reason,
-                          email us within 90 days and we'll refund you in full,
-                          no questions asked.
+                          If you&apos;re unhappy with your purchase for any
+                          reason, email us within 90 days and we&apos;ll refund
+                          you in full, no questions asked.
                         </Disclosure.Panel>
                       </>
                     )}

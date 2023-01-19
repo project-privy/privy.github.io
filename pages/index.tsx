@@ -140,7 +140,7 @@ export default function Home() {
         </section>
         <section className='h-1/6 flex flex-col items-center justify-center border-b-4 border-t-4 border-indigo-500'>
           <p className='text-3xl m-8 max-w-[50%] text-center'>
-            Without Privy, I wouldn't have been able to advance my career
+            Without Privy, I wouldn&apos;t have been able to advance my career
             without experiencing such a stream line process.
           </p>
           <label className='text-xl mb-8 max-w-[50%] text-center'>
