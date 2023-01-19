@@ -13,7 +13,7 @@ import {
   FaLinkedin,
 } from 'react-icons/fa';
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ');
 }
 export default function About() {
