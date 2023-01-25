@@ -14,11 +14,11 @@ export default function Home() {
       <div>
         <section
           id='splash-container'
-          className='relative mx-auto h-2/6 min-h-[800px] bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-400'
+          className='relative mx-auto h-2/6 xs:h-1/6 min-h-[800px] xs:min-h-[600px] bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-400'
         >
           <div
             id='text-container'
-            className='h-1/2 w-2/6 p-16 bg-slate-100 absolute top-[10%] left-[200px] rounded-md z-10'
+            className='h-1/2 w-2/6 xs:w-4/6 sm:w-3/6 p-16 xs:p-8 bg-slate-100 absolute top-[10%] left-[10%] xs:left-[5%] rounded-md z-10'
           >
             <label className='text-4xl'>Welcome to</label>
             <div className='pt-4'>
@@ -30,7 +30,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='h-1/2 w-4/6 absolute bottom-[5%] right-[100px] z-20'>
+          <div className='h-1/2 w-4/6 xs:w-5/6 absolute bottom-[5%] xs:bottom-0 right-[5%] z-20'>
             <Image
               style={landingStyle}
               src={'/landing-splash.jpg'}
@@ -45,7 +45,7 @@ export default function Home() {
         </section>
         <section
           id='highlights'
-          className='mx-auto mb-10 mt-20 max-w-[80%] h-1/6 flex justify-evenly'
+          className='mx-auto mb-10 mt-20 max-w-[80%] h-1/6 flex flex-wrap justify-evenly'
         >
           <div className='max-w-sm rounded overflow-hidden shadow-lg m-2'>
             <div className='p-2'>
