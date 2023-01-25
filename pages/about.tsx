@@ -93,8 +93,8 @@ export default function About() {
               </p>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='flex justify-center w-full m-8'>
-                <div className='w-[50%] rounded-2xl bg-white p-2'>
+              <div className='flex justify-center m-8'>
+                <div className='w-[50%] sm:w-3/5 xs:w-4/5 rounded-2xl bg-white p-2'>
                   <Disclosure>
                     {({ open }) => (
                       <>
@@ -216,7 +216,7 @@ export default function About() {
         className='mx-auto mb-16 max-w-[60%] h-1/6 flex flex-col pt-8'
       >
         <label className='text-4xl text-center p-2'>Meet the team</label>
-        <div className='flex justify-evenly'>
+        <div className='flex xs:flex-col flex-wrap justify-evenly'>
           <div className='max-w-sm rounded overflow-hidden shadow-lg'>
             <div className='p-3'>
               <Image
